@@ -8,7 +8,7 @@ const mongoose = require("mongoose");
 
 const port = process.env.PORT || 3000;
 
-mongoose.connect("mongodb+srv://"+(process.env.name || `harman`)+":"+(process.env.password || `uzOCWIXoycQstfM2`)+"@cluster0.upwjcyv.mongodb.net/blogPosts?retryWrites=true&w=majority", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://"+(process.env.name)+":"+(process.env.password)+"@cluster0.upwjcyv.mongodb.net/blogPosts?retryWrites=true&w=majority", {useNewUrlParser: true});
 const post = new mongoose.Schema({title: String, content: String});
 const Post_mod = mongoose.model("posts", post);
 
